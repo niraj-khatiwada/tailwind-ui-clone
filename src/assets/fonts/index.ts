@@ -1,17 +1,20 @@
-import { Poppins as GooglePoppins } from 'next/font/google'
+import { Inter as GoogleInter } from 'next/font/google'
 import localFont from 'next/font/local'
 
-const Archive = localFont({ src: './Archive.otf', variable: '--font-Archive' })
-const Poppins = GooglePoppins({
+const CabinetGrotesk = localFont({
+  src: './CabinetGrotesk.ttf',
+  variable: '--font-CG',
+})
+const Inter = GoogleInter({
   weight: ['400', '500'],
-  variable: '--font-Poppins',
+  variable: '--font-Inter',
   subsets: ['latin'],
 })
 
-const fonts = [Archive, Poppins]
+export const fonts = [CabinetGrotesk, Inter]
 
 export const combinedFontVariables = fonts
   .map((font) => `${font.variable}`)
   .join(' ')
 
-export { Archive, Poppins }
+export { CabinetGrotesk, Inter }

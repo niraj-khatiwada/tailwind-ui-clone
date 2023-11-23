@@ -1,35 +1,34 @@
-// import React from 'react'
-// import {
-//   Button as NextButton,
-//   ButtonProps as NextButtonProps,
-// } from '@nextui-org/button'
-
-// import { mergeClasses } from '@/utils/tailwind'
-
-// export interface ButtonProps extends NextButtonProps {
-//   color?: NextButtonProps['color']
-//   variant?: NextButtonProps['variant']
-// }
-
-// function Button(props: ButtonProps) {
-//   const { color, variant, ...nextButtonProps } = props
-
-//   return (
-//     <NextButton
-//       {...nextButtonProps}
-//       color={color ?? 'default'}
-//       variant={variant ?? 'flat'}
-//       className={mergeClasses(['font-medium', nextButtonProps.className])}
-//     />
-//   )
-// }
-
-// export default Button
-
 import React from 'react'
+import { mergeClasses } from '@/utils/tailwind'
 
-function Button() {
-  return <div>Button</div>
+import styles from './styles.module.css'
+
+type Variant = 'solid' | 'bordered'
+
+export interface ButtonProps extends React.ComponentProps<'button'> {
+  text?: string
+  variant?: Variant
+}
+
+function Button(props: ButtonProps) {
+  return (
+    <button
+      {...props}
+      className={mergeClasses([
+        styles.button,
+        props.variant === 'bordered'
+          ? styles.buttonVariantBordered
+          : styles.buttonVariantSolid,
+        props.className,
+      ])}
+    >
+      {props.text ? (
+        <span className={styles.buttonText}>{props.text}</span>
+      ) : (
+        props.children
+      )}
+    </button>
+  )
 }
 
 export default Button

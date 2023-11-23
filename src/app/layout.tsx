@@ -4,7 +4,7 @@ import './globals.css'
 
 import { mergeClasses } from '@/utils/tailwind'
 import ThemeProvider from '../providers/ThemeProvider'
-import { combinedFontVariables, Poppins } from '../assets/fonts'
+import { combinedFontVariables, fonts } from '../assets/fonts'
 import Head from './(root)/Head'
 
 export default function RootLayout({
@@ -17,7 +17,9 @@ export default function RootLayout({
       <Head />
       <body
         className={mergeClasses([
-          `${Poppins.className} ${combinedFontVariables}`,
+          `${fonts
+            .map((font) => font.className)
+            .join(' ')} ${combinedFontVariables}`,
         ])}
       >
         <ThemeProvider>{children}</ThemeProvider>

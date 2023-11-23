@@ -1,6 +1,5 @@
 /** @type {import('next').NextConfig} */
 
-import million from 'million/compiler'
 import analyzeBundle from '@next/bundle-analyzer'
 
 const withBundleAnalyzer = analyzeBundle({
@@ -26,10 +25,4 @@ const nextConfig = withBundleAnalyzer({
   },
 })
 
-const millionConfig = {
-  auto: true,
-  // if you're using RSC:
-  // auto: { rsc: true },
-}
-
-export default million.next(nextConfig, millionConfig)
+export default nextConfig

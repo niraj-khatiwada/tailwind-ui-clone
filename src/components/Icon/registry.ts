@@ -1,19 +1,17 @@
-import React from 'react'
+import { type SVGComponent } from '@/types/svg'
 
-import Moon from '@/assets/icons/moon.svg'
-import Sun from '@/assets/icons/sun.svg'
-
-type SVGAsComponent = React.FC<React.SVGProps<SVGElement>>
+import Star from '@/assets/icons/star.svg'
+import Check from '@/assets/icons/check.svg'
 
 function asRegistry<T extends string>(
-  arg: Record<T, SVGAsComponent>
-): Record<T, SVGAsComponent> {
+  arg: Record<T, SVGComponent>
+): Record<T, SVGComponent> {
   return arg
 }
 
 const registry = asRegistry({
-  moon: Moon,
-  sun: Sun,
+  star: Star,
+  checK: Check,
 })
 
 export default registry

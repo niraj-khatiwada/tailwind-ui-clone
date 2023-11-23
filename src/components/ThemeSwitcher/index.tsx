@@ -3,8 +3,6 @@
 import React from 'react'
 import { useTheme } from 'next-themes'
 
-import IconButton from '../IconButton'
-
 interface ThemeSwitcherChildrenProps {
   theme: string | undefined
   setTheme(theme: string | undefined): void
@@ -29,13 +27,10 @@ function ThemeSwitcher(props: ThemeSwitcherProps) {
   }
 
   return children == null ? (
-    <IconButton
-    // iconProps={{ name: theme === 'light' ? 'moon' : 'sun' }}
-    // buttonProps={{
-    //   onClick: function () {
-    //     setTheme(theme === 'light' ? 'dark' : 'light')
-    //   },
-    // }}
+    <button
+      onClick={function () {
+        setTheme(theme === 'light' ? 'dark' : 'light')
+      }}
     />
   ) : (
     children({ theme, setTheme })

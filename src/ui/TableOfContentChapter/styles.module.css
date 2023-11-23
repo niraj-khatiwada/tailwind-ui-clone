@@ -1,0 +1,15 @@
+.chaptersContainer {
+  margin: 32px 0;
+  background-color: #f8fafc;
+  padding: 32px;
+  border-radius: 16px;
+}
+
+.title {
+  font-family: theme('fontFamily.CG');
+  color: theme('colors.black1');
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.6px;
+  line-height: 32px;
+}

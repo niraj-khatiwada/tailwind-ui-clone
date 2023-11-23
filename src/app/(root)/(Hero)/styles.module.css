@@ -1,0 +1,61 @@
+.container {
+  display: flex;
+}
+
+.rectangleVector {
+  flex-shrink: 0;
+  width: 555px;
+  height: 885px;
+  z-index: -1;
+  border-bottom-right-radius: 5rem;
+  position: relative;
+  margin-right: -10rem;
+}
+
+.bookImage {
+  --shadow: theme('boxShadow.xl');
+  box-shadow: var(--shadow);
+  -moz-box-shadow: var(--shadow);
+  -webkit-box-shadow: var(--shadow);
+  border-radius: 5px;
+  flex-wrap: wrap;
+  object-fit: contain;
+  margin: auto 0;
+}
+
+.testimonialTest {
+  max-width: 448px;
+  color: theme('colors.black1');
+  font-family: theme('fontFamily.CG');
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 32px;
+}
+
+.testimonialUser {
+  margin-top: 8px;
+  font-size: 14px;
+  line-height: 24px;
+  color: theme('colors.gray2');
+}
+
+.testimonialUser > strong::before {
+  content: '-';
+  display: inline-block;
+  transform: scaleX(3);
+  margin: 0 3px;
+}
+
+.brandText {
+  font-family: theme('fontFamily.CG');
+  font-size: 64px;
+  font-weight: 800;
+  line-height: 64px;
+}
+
+.brandSubtext {
+  margin-top: 16px;
+  font-size: 24px;
+  line-height: 32px;
+  color: #475569;
+}

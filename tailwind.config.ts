@@ -16,21 +16,20 @@ const config: Config = {
   content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      boxShadow: {
+        xl: '2px 11px 16px rgba(15,23,42,.17),0 1px 6px rgba(15,23,42,.17),3px 23px 24px rgba(15,23,42,.17)',
       },
       colors: {
-        primary: '#7f46e2',
-        secondary: '#ff6ae7',
-        black1: '#000000',
-        gray1: '#c2c2c2',
+        primary: '#2563eb',
+        secondary: '#3b82f6',
+        black1: '#0f172a',
         white1: '#ffffff',
+        gray1: '#f1f5f9',
+        gray2: '#64748b',
       },
       fontFamily: {
-        Archive: ['var(--font-Archive)'],
-        Poppins: ['var(--font-Poppins)'],
+        CG: ['var(--font-CG)'],
+        Inter: ['var(--font-Inter)'],
       },
       screens: WIDTHS,
       maxWidth: WIDTHS,
