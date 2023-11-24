@@ -1,0 +1,18 @@
+.container {
+  max-width: 280px;
+}
+
+.figure {
+  background-image: theme('backgroundImage.conicGradient1');
+  height: 176px;
+  min-width: 280px;
+  border-radius: 16px;
+  position: relative;
+}
+
+.figure > svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

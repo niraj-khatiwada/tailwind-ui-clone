@@ -2,18 +2,16 @@ import React from 'react'
 
 import styles from './styles.module.css'
 
-type Chapter = {
-  name: string
-  page: number
-}
-
-type TableOfContentChapterProps = {
+type ChapterProps = {
   title: string
-  data: Chapter[]
+  data: {
+    name: string
+    page: number
+  }[]
   className?: React.HTMLProps<HTMLElement>['className']
 }
 
-function TableOfContentChapter(props: TableOfContentChapterProps) {
+function Chapter(props: ChapterProps) {
   return (
     <div className={props.className}>
       <p className={styles.title}>{props.title}</p>
@@ -32,4 +30,4 @@ function TableOfContentChapter(props: TableOfContentChapterProps) {
   )
 }
 
-export default TableOfContentChapter
+export default Chapter

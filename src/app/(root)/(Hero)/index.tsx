@@ -3,21 +3,23 @@ import Image from 'next/image'
 
 import { type SVGComponent } from '@/types/svg'
 
-import Layout from '@/components/Layout'
 import Button from '@/components/Button'
-import RectangleVectorSVG from '@/assets/images/rectangle.svg'
+import Pattern1VectorSVG from '@/assets/images/pattern1.svg'
 import styles from './styles.module.css'
 import { mergeClasses } from '@/utils/tailwind'
 import BookImage from '@/assets/images/book.webp'
 import Icon from '@/components/Icon'
 
-const RectangleVector = RectangleVectorSVG as SVGComponent
+const Pattern1VectorSVGVector = Pattern1VectorSVG as SVGComponent
 
 function Hero() {
   return (
     <div className={mergeClasses([styles.container, 'h-full relative'])}>
       <div className={mergeClasses([styles.rectangleVector, 'bg-primary'])}>
-        <RectangleVector className="text-white1 opacity-10 w-full h-full" />
+        <Pattern1VectorSVGVector
+          id="hero"
+          className="text-white1 opacity-10 w-full h-full"
+        />
       </div>
       <div className="flex items-center justify-center">
         <Image

@@ -13,13 +13,14 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <Head />
       <body
         className={mergeClasses([
           `${fonts
             .map((font) => font.className)
             .join(' ')} ${combinedFontVariables}`,
+          'bg-white1',
         ])}
       >
         <ThemeProvider>{children}</ThemeProvider>

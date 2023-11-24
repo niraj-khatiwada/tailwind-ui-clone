@@ -2,7 +2,7 @@ import React from 'react'
 
 import styles from './style.module.css'
 
-type PillProps = {
+export interface PillProps {
   text: string
   prefixText?: string
 }
