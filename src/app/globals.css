@@ -16,3 +16,7 @@ body {
 [class='light'] body {
   background-color: theme('colors.white1');
 }
+
+* {
+  scroll-margin-top: 100px;
+}

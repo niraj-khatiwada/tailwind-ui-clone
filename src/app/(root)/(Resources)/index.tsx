@@ -19,7 +19,7 @@ function Resources() {
             description="Design assets, icon teardowns, and a community of fellow icon designers where you can ask questions, get feedback, and accelerate your learning."
           />
         </div>
-        <div className="mt-16 flex justify-center items-center gap-20">
+        <div className="mt-16 flex flex-wrap justify-center items-center gap-20">
           <Resource
             title={'Figma icon templates'}
             description={

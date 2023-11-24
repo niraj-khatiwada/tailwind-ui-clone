@@ -21,7 +21,9 @@ function ScreenCasts() {
             description="Learn how to design your very first icons in a series of screencasts that will teach you everything you need to know to go from beginner to pro in just over an hour."
           />
         </div>
-        <div className={mergeClasses([styles.contentContainer, 'mt-16'])}>
+        <div
+          className={mergeClasses([styles.contentContainer, 'mt-8 lg:mt-16'])}
+        >
           <Content
             bannerImage={<ContentImage1SVG />}
             title={'Getting started with Figma'}

@@ -1,7 +1,7 @@
 .chaptersContainer {
-  margin: 32px 0;
+  margin: 16px 0;
   background-color: #f8fafc;
-  padding: 32px;
+  padding: 16px 32px;
   border-radius: 16px;
 }
 
@@ -12,4 +12,10 @@
   font-weight: 700;
   letter-spacing: -0.6px;
   line-height: 32px;
+}
+@media screen and (min-width: 992px) {
+  .chaptersContainer {
+    margin: 32px 0;
+    padding: 32px;
+  }
 }

@@ -16,7 +16,7 @@ function TableOfContents() {
         highly visual pages designed to teach you everything you need to know
         about icon design with no unnecessary filler."
         />
-        <div className="my-16">
+        <div className="my-8 lg:my-16">
           <Chapter
             title="Getting started"
             data={[
@@ -26,7 +26,7 @@ function TableOfContents() {
             ]}
           />
           <Chapter
-            className="my-20"
+            className="my-8 lg:my-20"
             title="Fundamentals"
             data={[
               { name: 'Strokes and fills', page: 21 },
@@ -37,7 +37,7 @@ function TableOfContents() {
             ]}
           />
           <Chapter
-            className="my-20"
+            className="my-8 lg:my-20"
             title="Boolean operations"
             data={[
               { name: 'Combining shapes', page: 50 },
@@ -47,7 +47,7 @@ function TableOfContents() {
             ]}
           />
           <Chapter
-            className="my-20"
+            className="my-8 lg:my-20"
             title="Optimizing for production"
             data={[
               { name: 'Preparing ', page: 82 },

@@ -1,5 +1,5 @@
 .container {
-  margin: 132px 0;
+  margin: 50px 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -7,5 +7,15 @@
 }
 .content {
   max-width: 56rem;
-  padding: 0 3rem;
+  padding: 0 2rem;
+}
+
+@media screen and (min-width: 992px) {
+  .container {
+    margin: 132px 0;
+  }
+  .content {
+    max-width: 56rem;
+    padding: 0 3rem;
+  }
 }

@@ -15,7 +15,7 @@ function Sample() {
             containing two of my favorite chapters.
           </p>
         </div>
-        <div style={{ alignSelf: 'end' }}>
+        <div style={{ alignSelf: 'end' }} className="mt-8 lg:mt-0">
           <h3 className="text-base font-medium tracking-tight text-white">
             Get two free chapters straight to your inbox →
           </h3>
@@ -28,13 +28,23 @@ function Sample() {
               placeholder="Email address"
               className="focus:outline-none bg-transparent placeholder:text-white/70 mr-4 text-white1"
             />
+            <div className="hidden md:block">
+              <Button
+                text="Get free chapters"
+                className="bg-white1"
+                textProps={{ className: 'text-primary' }}
+                variant="none"
+              />
+            </div>
+          </form>
+          <div className="md:hidden">
             <Button
               text="Get free chapters"
-              className="bg-white1"
+              className="bg-white1 w-full mt-4"
               textProps={{ className: 'text-primary' }}
               variant="none"
             />
-          </form>
+          </div>
         </div>
       </div>
       <div className={styles.patternVector}>

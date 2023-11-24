@@ -18,7 +18,10 @@ interface ContentProps {
 function Content(props: ContentProps) {
   return (
     <div
-      className={mergeClasses([styles.container, '[counter-increment:video]'])}
+      className={mergeClasses([
+        styles.container,
+        'mt-8 lg:mt-0 [counter-increment:video]',
+      ])}
     >
       <figure className={mergeClasses([styles.figure, 'shadow-lg'])}>
         {props.bannerImage}

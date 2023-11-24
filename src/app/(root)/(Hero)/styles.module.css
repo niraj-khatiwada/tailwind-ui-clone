@@ -1,15 +1,19 @@
 .container {
   display: flex;
+  position: relative;
+}
+
+.contentContainer {
+  margin: 0 auto;
 }
 
 .rectangleVector {
   flex-shrink: 0;
-  width: 555px;
-  height: 885px;
+  width: 50vw;
+  height: 600px;
   z-index: -1;
   border-bottom-right-radius: 5rem;
-  position: relative;
-  margin-right: -10rem;
+  position: absolute;
 }
 
 .bookImage {
@@ -21,6 +25,7 @@
   flex-wrap: wrap;
   object-fit: contain;
   margin: auto 0;
+  width: 80%;
 }
 
 .testimonialTest {
@@ -48,14 +53,41 @@
 
 .brandText {
   font-family: theme('fontFamily.CG');
-  font-size: 64px;
+  font-size: 45px;
   font-weight: 800;
-  line-height: 64px;
+  line-height: 40px;
 }
 
 .brandSubtext {
   margin-top: 16px;
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 18px;
+  line-height: 22px;
   color: #475569;
+}
+
+@media screen and (min-width: 992px) {
+  .contentContainer {
+    display: flex;
+  }
+  .brandText {
+    font-size: 64px;
+    line-height: 64px;
+  }
+  .brandSubtext {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .rectangleVector {
+    margin-left: -25.1rem;
+  }
+  .testimonialTest {
+    margin-top: 0;
+  }
+
+  .bookImage {
+    width: 470px;
+  }
+  .rectangleVector {
+    height: 885px;
+  }
 }

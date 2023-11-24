@@ -74,7 +74,7 @@ const data = [
     avatar: {
       name: 'Vernon Cummerata',
       description: 'UI Engineer',
-      imageProps: { src: TestimonialUser7.src },
+      imageProps: { src: TestimonialUser8.src },
     },
   },
   {
@@ -100,7 +100,7 @@ function Testimonials() {
           they had to say about the finished product.
         </p>
       </div>
-      <ul className="mx-auto grid max-w-2xl grid-cols-1 gap-8 px-4 lg:max-w-7xl lg:grid-cols-3 lg:px-8 mt-16">
+      <ul className="mx-auto grid place-items-center md:place-items-start max-w-2xl grid-cols-1 md:grid-cols-2 gap-8 px-4 lg:max-w-7xl lg:grid-cols-3 lg:px-8 mt-16">
         {data.map((item) => (
           <TestimonialCard
             key={item.text}

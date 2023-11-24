@@ -21,6 +21,7 @@
   align-items: center;
   letter-spacing: -0.4px;
   line-height: 32px;
+  white-space: nowrap;
 }
 
 .buttonVariantSolid .buttonText {

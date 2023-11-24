@@ -3,9 +3,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
   min-height: 130px;
-  margin-top: 100px;
-  border-bottom: 1px solid rgb(226 232 240);
   position: sticky;
   top: 0;
   left: 0;
@@ -14,13 +13,12 @@
 }
 
 .box {
-  min-width: 250px;
-  padding: 40px 53px;
+  min-width: 100px;
+  padding: 20px 30px;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  transition: all 100ms ease-in-out;
+  transition: background-color 100ms ease-in-out;
 }
 
 .box > span {
@@ -30,6 +28,7 @@
   line-height: 32px;
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
     Liberation Mono, Courier New, monospace;
+  margin-right: 8px;
 }
 
 .box > p {
@@ -45,4 +44,27 @@
 .selected {
   border-bottom: 2px solid rgb(37 99 235);
   background-color: rgb(239 246 255);
+}
+
+@media screen and (min-width: 1050px) {
+  .container {
+    border-bottom: 1px solid rgb(226 232 240);
+    margin-top: 100px;
+  }
+  .box {
+    min-width: 250px;
+    padding: 40px 53px;
+    flex-direction: column;
+    padding: 40px 53px;
+  }
+
+  .box > span {
+    margin-right: 0;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .box {
+    padding: 40px 53px;
+  }
 }

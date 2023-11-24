@@ -34,15 +34,15 @@ function TestimonialBanner(props: TestimonialBannerProps) {
         <rect width="100%" height="100%" fill="url(#:S2:)"></rect>
       </svg>
       <div className={styles.content}>
-        <div className="flex items-center">
+        <div className="flex items-center md:justify-center">
           {new Array(props.rating).fill(0).map((_, index) => (
             <Icon key={index.toString()} name="star" className="mx-1" />
           ))}
         </div>
-        <blockquote className="mt-10 font-display text-4xl text-[2rem] font-medium tracking-tight text-slate-900 sm:text-center font-CG">
+        <blockquote className="mt-4 lg:mt-10 font-display text-3xl lg:text-4xl text-[2rem] font-medium tracking-tight text-slate-900 text-left sm:text-center font-CG">
           <p>{props.text}</p>
         </blockquote>
-        <div className="mt-10 text-left">
+        <div className="mt-8 lg:mt-10">
           {props.avatarProps ? <Avatar {...props.avatarProps} /> : null}
         </div>
       </div>

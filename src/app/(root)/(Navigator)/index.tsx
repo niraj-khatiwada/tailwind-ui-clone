@@ -81,7 +81,7 @@ function Navigator() {
             isSelected(item.id) ? styles.selected : '',
           ])}
         >
-          <span className="block">0{index}</span>
+          <span className="block">0{index + 1}</span>
           <p>{item.title}</p>
         </Link>
       ))}
