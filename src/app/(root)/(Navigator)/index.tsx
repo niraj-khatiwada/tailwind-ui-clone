@@ -87,7 +87,7 @@ function Navigator() {
         'backdrop-blur-2xl sticky top-0 left-0 right-0 items-start',
       ])}
     >
-      <div className={`${dropdownVisible ? 'block' : 'hidden'} md:block`}>
+      <div className={`${dropdownVisible ? 'block' : 'hidden'} md:flex`}>
         {Object.values(target).map((item, index) => (
           <Link
             key={item.id}
@@ -106,7 +106,7 @@ function Navigator() {
         ))}
       </div>
       {!dropdownVisible ? (
-        <div>
+        <div className="md:hidden">
           <p className="text-base font-medium text-slate-900">{title}</p>
         </div>
       ) : null}
