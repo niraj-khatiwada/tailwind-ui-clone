@@ -12,7 +12,7 @@ const CabinetGrotesk = localFont({
 const Inter = GoogleInter({
   variable: '--font-Inter',
   subsets: ['latin'],
-  display: 'swap',
+  // display: 'swap',
 })
 
 export const fonts = [CabinetGrotesk, Inter]
