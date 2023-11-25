@@ -29,6 +29,7 @@ function Hero() {
             height={629}
             alt="book"
             className={mergeClasses([styles.bookImage])}
+            priority
           />
         </div>
         <section className="px-6 lg:px-0 lg:ml-[40px] xl:ml-[80px] mt-[50px] lg:mt-0">

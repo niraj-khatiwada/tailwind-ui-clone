@@ -36,7 +36,11 @@ function TestimonialBanner(props: TestimonialBannerProps) {
       <div className={styles.content}>
         <div className="flex items-center md:justify-center">
           {new Array(props.rating).fill(0).map((_, index) => (
-            <Icon key={index.toString()} name="star" className="mx-1" />
+            <Icon
+              key={index.toString()}
+              name="star"
+              className="mx-1 text-black1"
+            />
           ))}
         </div>
         <blockquote className="mt-4 lg:mt-10 font-display text-3xl lg:text-4xl text-[2rem] font-medium tracking-tight text-slate-900 text-left sm:text-center font-CG">

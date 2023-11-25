@@ -38,16 +38,16 @@ function Pricing() {
             <Button text="Get started" className="w-full mt-8 !bg-black1" />
             <ul className="divide-y mt-8">
               <li className="flex items-center my-4">
-                <Icon name="checK" size={30} />
-                <span className="ml-4">The 240-page ebook</span>
+                <Icon name="checK" size={30} className="text-slate-600" />
+                <span className="ml-4 text-black1">The 240-page ebook</span>
               </li>
               <li className="flex items-center py-2">
-                <Icon name="checK" size={30} />
-                <span className="ml-4">Figma icon templates</span>
+                <Icon name="checK" size={30} className="text-slate-600" />
+                <span className="ml-4 text-black1">Figma icon templates</span>
               </li>
               <li className="flex items-center py-2">
-                <Icon name="checK" size={30} />
-                <span className="ml-4">Community access</span>
+                <Icon name="checK" size={30} className="text-slate-600" />
+                <span className="ml-4 text-black1">Community access</span>
               </li>
             </ul>
           </div>

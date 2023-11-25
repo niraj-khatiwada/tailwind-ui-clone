@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  scroll-margin-top: 100px;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -15,8 +19,4 @@ body {
 
 [class='light'] body {
   background-color: theme('colors.white1');
-}
-
-* {
-  scroll-margin-top: 100px;
 }

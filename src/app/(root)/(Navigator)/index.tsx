@@ -4,6 +4,7 @@ import Link from 'next/link'
 
 import styles from './styles.module.css'
 import { mergeClasses } from '@/utils/tailwind'
+import Icon from '@/components/Icon'
 
 const target = {
   tableOfContents: {
@@ -29,6 +30,7 @@ const target = {
 }
 
 function Navigator() {
+  const [dropdownVisible, setDropdownVisible] = React.useState(false)
   const [currentTarget, setCurrentTarget] = React.useState<string | null>()
   React.useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -45,6 +47,19 @@ function Navigator() {
       observer.disconnect()
     }
   }, [])
+
+  const title = React.useMemo(() => {
+    if (!(currentTarget == null)) {
+      const entries = Object.values(target)
+      for (let i = 0; i < entries.length; i++) {
+        const entry = entries[i]
+        if (entry.id === currentTarget) {
+          return entry.title
+        }
+      }
+    }
+    return ''
+  }, [currentTarget])
 
   const isSelected = React.useCallback(
     function (id: string): boolean {
@@ -69,22 +84,44 @@ function Navigator() {
     <div
       className={mergeClasses([
         styles.container,
-        'backdrop-blur-2xl sticky top-0 left-0 right-0 items-start ',
+        'backdrop-blur-2xl sticky top-0 left-0 right-0 items-start',
       ])}
     >
-      {Object.values(target).map((item, index) => (
-        <Link
-          key={item.id}
-          href={`#${item.id}`}
-          className={mergeClasses([
-            styles.box,
-            isSelected(item.id) ? styles.selected : '',
-          ])}
-        >
-          <span className="block">0{index + 1}</span>
-          <p>{item.title}</p>
-        </Link>
-      ))}
+      <div className={`${dropdownVisible ? 'block' : 'hidden'} md:block`}>
+        {Object.values(target).map((item, index) => (
+          <Link
+            key={item.id}
+            href={`#${item.id}`}
+            className={mergeClasses([
+              styles.box,
+              isSelected(item.id) ? styles.selected : '',
+            ])}
+            onClick={function () {
+              setDropdownVisible(false)
+            }}
+          >
+            <span className="block">0{index + 1}</span>
+            <p>{item.title}</p>
+          </Link>
+        ))}
+      </div>
+      {!dropdownVisible ? (
+        <div>
+          <p className="text-base font-medium text-slate-900">{title}</p>
+        </div>
+      ) : null}
+      <button
+        className="absolute top-3 right-5 md:hidden"
+        onClick={function () {
+          setDropdownVisible((_) => !_)
+        }}
+      >
+        <Icon
+          name={dropdownVisible ? 'cross' : 'dropdown'}
+          className="text-black1"
+          size={30}
+        />
+      </button>
     </div>
   )
 }
